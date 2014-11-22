@@ -1,5 +1,5 @@
 # customheuristic.py
-# predicts Titanic pssenger survival with 80.02 % accuracy using a combination
+# predicts Titanic passenger survival with 80.02 % accuracy using a combination
 # of passenger gender, age, socioeconomic class, and fare price paid
 # completed as part of Data Science project 
 
@@ -27,9 +27,6 @@ def custom_heuristic(file_path):
         elif (passenger['Pclass'] == 2 or passenger['Pclass'] == 3):
             passenger_id = passenger['PassengerId']
             predictions[passenger_id] = 0
-        elif (passenger['Age'] <= 8):
-            passenger_id = passenger['PassengerId']
-            predictions[passenger_id] = 1
         elif (passenger['Sex'] == 'male' or passenger['Pclass'] == 3):
             passenger_id = passenger['PassengerId']
             predictions[passenger_id] = 0
